@@ -556,40 +556,8 @@ button:hover {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: none;
+    display: none; /* Initially hidden */
     flex-direction: column;
-  }
-  
-  #chatbot-header {
-    background: #007BFF;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #chatbot-body {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-  }
-  
-  #userInput {
-    width: 80%;
-    padding: 10px;
-  }
-  
-  #sendBtn {
-    width: 18%;
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-  }
-  
-  #messages {
-    height: 80%;
-    overflow-y: auto;
+    z-index: 1000; /* Ensure it appears on top */
   }
   
