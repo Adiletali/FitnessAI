@@ -131,3 +131,13 @@ async function fetchAIResponse(userMessage) {
     }
   });
   
+  // Show chatbot when "Open Chat" button is clicked
+document.getElementById('openChatBtn').addEventListener('click', () => {
+    document.getElementById('chatbot').style.display = 'flex'; // Show the chatbot
+  });
+  
+  // Close chatbot functionality
+  document.getElementById('closeChatBtn').addEventListener('click', () => {
+    document.getElementById('chatbot').style.display = 'none'; // Hide the chatbot
+  });
+  
