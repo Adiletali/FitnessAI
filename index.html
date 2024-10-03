@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered fitness platform to help you reach your goals with personalized workout and nutrition plans.">
+    <title>AI Fitness Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">AI Fitness</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><button id="featuresBtn" class="nav-button">Features</button></li>
+                    <li><button id="aboutBtn" class="nav-button">About</button></li>
+                    <li><button id="contactBtn" class="nav-button">Contact Us</button></li>
+                    <li><button id="loginBtn" class="nav-button">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="welcome-section">
+        <h1>Welcome to FitAI</h1>
+        <p>Your AI-powered fitness platform to achieve your goals.</p>
+        <button id="scrollToPlansBtn">See Our Plans</button>
+    </section>
+       
+<!-- Features Section -->
+<section id="featuresSection">
+    <h2>Our Features</h2>
+    <p>We use the latest AI technology to provide personalized fitness plans tailored to your individual needs, helping you achieve your health and fitness goals faster and smarter.</p>
+    <div class="features-container">
+        <div class="feature">
+            <img src="images/workout_plan.jpg" alt="Personalized Workout Plans">
+            <h3>Personalized Workout Plans</h3>
+            <p>Create customized workouts that fit your schedule and fitness level.</p>
+        </div>
+        <div class="feature">
+            <img src="images/eat.jpg" alt="AI-Driven Nutrition Advice">
+            <h3>AI-Driven Nutrition Advice</h3>
+            <p>Receive nutrition plans designed to fuel your fitness journey.</p>
+        </div>
+        <div class="feature">
+            <img src="images/coach.jpg" alt="24/7 Virtual Coach">
+            <h3>24/7 Virtual Coach</h3>
+            <p>Get guidance and support anytime you need it, right from your device.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Updated Plans Section -->
+<section id="plans">
+    <h2>Our Plans</h2>
+    <div class="plans-container">
+        <div class="plan-box">
+            <h3>Basic Plan</h3>
+            <p class="price">$19.99/month</p>
+            <ul>
+                <li>💪 Access to Basic Workout Plans</li>
+                <li>📊 Progress Tracking</li>
+                <li>🌟 Beginner-Friendly Guidance</li>
+            </ul>
+            <button class="get-started-btn">Join Now</button>
+        </div>
+
+        <div class="plan-box">
+            <h3>Premium Plan</h3>
+            <p class="price">$49.99/month</p>
+            <ul>
+                <li>🔑 Everything in Basic Plan</li>
+                <li>🍽️ AI-Driven Nutrition Guidance</li>
+                <li>🏋️ Personalized Workout Recommendations</li>
+                <li>🗓️ Monthly Progress Review</li>
+            </ul>
+            <button class="get-started-btn">Join the Elite</button>
+        </div>
+
+        <div class="plan-box">
+            <h3>Pro Plan</h3>
+            <p class="price">$99.99/month</p>
+            <ul>
+                <li>🏆 Everything in Premium Plan</li>
+                <li>🤖 24/7 Virtual Coach Support</li>
+                <li>💎 Exclusive Member Features</li>
+                <li>🎉 Access to Special Events</li>
+            </ul>
+            <button class="get-started-btn">Become a Pro</button>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section id="call-to-action" class="call-to-action">
+    <h2>Transform Your Life with Our Fitness Program!</h2>
+    <p>Join our community of achievers and get personalized support on your journey to health and fitness. Sign up today and start seeing results!</p>
+    <a href="#" id="joinNowBtn" class="styled-button">Get Started Today!</a>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contactSection" class="contact-section">
+    <h2>Get In Touch With Us</h2>
+    <p>If you have any questions, feel free to reach out to us. We’re here to help!</p>
+
+    <form id="contactForm" class="contact-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="styled-button">Send Message</button>
+    </form>
+</section>
+
+<!-- About Us Section -->
+<section id="aboutSection" class="about-section">
+    <h2>About Us</h2>
+    <p>At AI Fitness Platform, we are dedicated to transforming the way people achieve their health and fitness goals. Our team of experts leverages cutting-edge AI technology to provide personalized fitness plans tailored to your individual needs.</p>
+    
+    <div class="team-container">
+        <div class="team-member">
+            <img src="images/hacker.png" alt="Team Member 1">
+            <h3>Adiletali Abikenov</h3>
+            <p>Co-Founder & Fitness Expert</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/hacker.png" alt="Team Member 2">
+            <h3>Adil Zhalgas</h3>
+            <p>Co-Founder & Nutritionist</p>
+        </div>
+        
+        <div class="team-member">
+            <img src="images/hacker.png" alt="Team Member 3">
+            <h3>Tamerlan Tastanbek</h3>
+            <p>AI Specialist</p>
+        </div>
+    </div>
+
+    <p>Join us on this journey to a healthier you!</p>
+</section>
+
+
+<!-- Modal Window for Login and Registration -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Login or Register</h2>
+            <button id="closeModal" class="close-button">&times;</button> <!-- Close Button -->
+        </div>
+        <div class="modal-body">
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="registerLink">Register Here</a></p>
+            <form id="registerForm" style="display: none;">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p style="display: none;" id="loginLinkParagraph">Already have an account? <a href="#" id="loginLink">Login Here</a></p>
+        </div>
+    </div>
+</div>
+
+
+    <footer>
+        <p>&copy; 2024 AI Fitness Platform. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- JavaScript for functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>

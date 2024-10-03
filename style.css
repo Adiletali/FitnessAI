@@ -1,0 +1,548 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* White color with 80% opacity */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000; /* Ensure the header is above other content */
+    transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+}
+
+
+.logo {
+    color: #333; /* Dark color for the logo */
+}
+
+.nav-button {
+    color: #333; /* Dark color for buttons */
+    background: transparent; /* Make button background transparent */
+    border: 1px solid rgba(51, 51, 51, 0.5); /* Optional border for buttons */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.nav-button:hover {
+    background-color: rgba(51, 51, 51, 0.1); /* Light hover effect */
+}
+
+
+/* Welcome Section */
+.welcome-section {
+    background: url(images/background.jpg) no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for better spacing */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.welcome-section h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-section p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#scrollToPlansBtn {
+    background-color: #FFC107;
+    color: #333;
+    border: none;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    font-size: 20px; /* Increased font size for the button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for effect */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#scrollToPlansBtn:hover {
+    background-color: #FFCA28; /* Lighter Amber */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Features Section */  
+#featuresSection {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#featuresSection h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#featuresSection p {
+    font-size: 24px ;
+    margin-bottom: 40px; /* Space below paragraph */
+}
+
+.features-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+}
+
+.feature {
+    background-color: rgb(255, 255, 255); /* White background for each feature */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px; /* Space between features */
+    padding: 20px; /* Padding inside feature boxes */
+    text-align: center; /* Center text inside feature boxes */
+    width: 300px; /* Fixed width for features */
+}
+
+.feature img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px 10px 0 0; /* Rounded corners on top */
+}
+
+.feature h3 {
+    font-size: 24px; /* Font size for feature titles */
+    margin: 15px 0 10px; /* Space around titles */
+}
+
+.feature p {
+    font-size: 16px; /* Font size for descriptions */
+    color: #666; /* Gray color for text */
+}
+
+
+/* Styles for About Us Section */
+.about-section {
+    background-color: #ffffff; /* White background for a clean look */
+    padding: 60px 20px; /* Ample padding */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 50px 0; /* Space between sections */
+}
+
+.about-section h2 {
+    font-size: 36px; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.about-section p {
+    font-size: 20px; /* Font size for paragraph */
+    margin-bottom: 30px; /* Space below paragraph */
+    color: #555; /* Slightly darker text for readability */
+}
+
+.team-container {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the team members */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.team-member {
+    margin: 15px; /* Space around team members */
+    text-align: center; /* Center text within team member boxes */
+    max-width: 200px; /* Limit the width */
+}
+
+.team-member img {
+    width: 100%; /* Make images responsive */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Space below image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.team-member h3 {
+    font-size: 22px; /* Size for team member names */
+    margin: 5px 0; /* Space above and below names */
+}
+
+.team-member p {
+    font-size: 16px; /* Size for roles */
+    color: #777; /* Slightly lighter text for roles */
+}
+
+/* Plans Section */
+#plans {
+    background-color: #f8f9fa; /* Light background for better contrast */
+    padding: 50px 20px;
+    margin: 50px 0; /* Space between sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#plans h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333; /* Darker text for better readability */
+}
+
+.price {
+    font-size: 24px; /* Larger font for price */
+    color: #28a745; /* Green color for price */
+    font-weight: bold; /* Make price bold */
+}
+
+.plans-container {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the plans */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.plan-box {
+    background-color: #ffffff; /* White background for each plan */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    margin: 20px; /* Space between plan boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    flex: 1; /* Allow flexibility in size */
+    min-width: 300px; /* Minimum width for each plan box */
+    max-width: 350px; /* Maximum width for each plan box */
+    text-align: center; /* Center text within each box */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.plan-box:hover {
+    transform: translateY(-5px); /* Slightly raise the box on hover */
+}
+
+.plan-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Space above and below list */
+}
+
+.plan-box li {
+    margin: 10px 0;
+    font-size: 18px; /* Increased font size */
+    color: #555; /* Darker color for text */
+}
+
+.get-started-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 18px; /* Larger font for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Animation for hover effect */
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Styles for Contact Us Section */
+.contact-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 60px 20px; /* Ample padding for spacious feel */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 50px 0; /* Space between sections */
+}
+
+.contact-section h2 {
+    font-size: 36px; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.contact-section p {
+    font-size: 20px; /* Font size for paragraph */
+    margin-bottom: 30px; /* Space below paragraph */
+    color: #555; /* Slightly darker text for readability */
+}
+
+.contact-form {
+    display: flex; /* Flexbox layout for form */
+    flex-direction: column; /* Column layout for form items */
+    max-width: 600px; /* Maximum width for form */
+    margin: 0 auto; /* Center the form */
+}
+
+.contact-form label {
+    margin-bottom: 5px; /* Space below label */
+    text-align: left; /* Align label to left */
+    font-weight: bold; /* Bold labels */
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.styled-button {
+    background-color: #ff5722; /* Vibrant button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 30px; /* Padding for button */
+    font-size: 20px; /* Larger font size for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Animation for hover effect */
+}
+
+.styled-button:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+/* Styles for Call to Action Section */
+#call-to-action {
+    position: relative; /* Relative positioning for future adjustments */
+    background-image: url(images/background2.jpeg); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    color: white; /* Text color */
+    padding: 120px 20px; /* Increased padding for spacious feel */
+    text-align: center; /* Center the text */
+    height: 80vh; /* Height of 80% of the viewport */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Column layout for centering */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    border-radius: 15px; /* Rounded corners for visual appeal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+#call-to-action h2 {
+    font-size: 48px; /* Larger heading size */
+    margin-bottom: 20px; /* Space below heading */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Enhanced shadow for depth */
+}
+
+#call-to-action p {
+    margin-bottom: 30px; /* Space below paragraph */
+    font-size: 24px; /* Larger font size for better readability */
+    line-height: 1.5; /* Improved line height for readability */
+    max-width: 700px; /* Max width for better text layout */
+}
+
+.styled-button {
+    background-color: #ff5722; /* Vibrant button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 30px; /* Padding for button */
+    font-size: 20px; /* Larger font size for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Animation for hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.styled-button:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* General button styles */
+.styled-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 30px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+.styled-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #3C3F43;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #FFC107;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Could be more or less, depending on screen size */
+    max-width: 400px; /* Max width for the modal */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body input {
+    margin: 10px 0; /* Space between inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-body button {
+    padding: 10px;
+    background-color: #FFC107;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.modal-body button:hover {
+    background-color: #FFCA28; /* Lighter Amber */
+}
+
+
+/* General Button Styles */
+button {
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%); /* Gradient background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 30px; /* More rounded corners */
+    padding: 15px 30px; /* Top-bottom and left-right padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    width: auto; /* Automatic width */
+    margin: 5px 0; /* Vertical margin for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #003f7f 100%); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Specific Button Styles for Plans Section */
+.get-started-btn {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%); /* Green gradient */
+}
+
+.get-started-btn:hover {
+    background: linear-gradient(135deg, #218838 0%, #1c7430 100%); /* Darker green on hover */
+}
+
+/* Header Button Styles */
+.nav-button {
+    background: transparent; /* Transparent background for nav buttons */
+    color: #007BFF; /* Text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: 2px solid #007BFF; /* Border */
+    border-radius: 30px; /* Rounded corners */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Header Buttons */
+.nav-button:hover {
+    background-color: #007BFF; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+/* Close Button Styles */
+.close-button {
+    background: none; /* Transparent background */
+    color: #000; /* Black color for the close button */
+    border: none; /* No border */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    position: absolute; /* Position it at the top right */
+    top: 10px; /* Distance from the top */
+    right: 15px; /* Distance from the right */
+}
+
+.close-button:hover {
+    color: #d9534f; /* Change color on hover */
+}
