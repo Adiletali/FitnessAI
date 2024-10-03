@@ -84,3 +84,50 @@ window.addEventListener("scroll", function() {
     }
     lastScrollTop = currentScroll; // Update last scroll position
 }); 
+
+require('dotenv').config();
+const { Configuration, OpenAIApi } = require('openai');
+
+const openai = new OpenAIApi(new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+}));
+
+// Function to handle sending the user's message to the backend
+async function fetchAIResponse(userMessage) {
+    try {
+      const response = await fetch('https://your-heroku-app-name.herokuapp.com/chat', {
+        method: 'POST', // Using POST because you're sending data
+        headers: {
+          'Content-Type': 'application/json' // Indicate the data is in JSON format
+        },
+        body: JSON.stringify({ message: userMessage }) // Send the user's message
+      });
+  
+      // Parse the JSON response from the backend
+      const data = await response.json();
+      
+      // Assuming 'data.response' contains the AI's reply
+      console.log('AI Response:', data.response);
+      addMessage('AI', data.response); // Function to display the AI's response in the chat
+    } catch (error) {
+      console.error('Error fetching AI response:', error);
+    }
+  }
+  
+  // Function to add messages to the chat
+  function addMessage(sender, message) {
+    const msgDiv = document.createElement('div');
+    msgDiv.textContent = `${sender}: ${message}`;
+    document.getElementById('messages').appendChild(msgDiv);
+  }
+  
+  // Example usage: Call fetchAIResponse when the user sends a message
+  document.getElementById('sendBtn').addEventListener('click', () => {
+    const userMessage = document.getElementById('userInput').value.trim();
+    if (userMessage) {
+      addMessage('User', userMessage); // Add the user's message to the chat
+      fetchAIResponse(userMessage); // Send the message to the backend and get AI response
+      document.getElementById('userInput').value = ''; // Clear the input field
+    }
+  });
+  
