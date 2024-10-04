@@ -37,7 +37,6 @@ header {
     gap: 20px; /* Space between nav items */
 }
 
-
 .logo {
     color: #333; /* Dark color for the logo */
 }
@@ -53,7 +52,6 @@ header {
 .nav-button:hover {
     background-color: rgba(51, 51, 51, 0.1); /* Light hover effect */
 }
-
 
 /* Welcome Section */
 .welcome-section {
@@ -143,7 +141,6 @@ header {
     font-size: 16px; /* Font size for descriptions */
     color: #666; /* Gray color for text */
 }
-
 
 /* Styles for About Us Section */
 .about-section {
@@ -332,7 +329,6 @@ header {
     transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
-
 /* Styles for Call to Action Section */
 #call-to-action {
     position: relative; /* Relative positioning for future adjustments */
@@ -399,7 +395,6 @@ header {
     background-color: #45a049; /* Darker green on hover */
     transform: scale(1.05); /* Slightly increase size on hover */
 }
-
 
 /* Footer Styles */
 footer {
@@ -481,7 +476,6 @@ footer nav ul li a:hover {
     background-color: #FFCA28; /* Lighter Amber */
 }
 
-
 /* General Button Styles */
 button {
     background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%); /* Gradient background */
@@ -547,17 +541,141 @@ button:hover {
     color: #d9534f; /* Change color on hover */
 }
 
+/* Общие стили для чатбота */
 #chatbot {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+#chatbot.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Заголовок */
+#chatbot-header {
+    background-color: #075e54;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatbot-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#chatbot-header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Основное тело чата */
+#chatbot-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e5ddd5;
+}
+
+#messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages .message {
+    max-width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+#messages .user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+#messages .ai-message {
+    background-color: white;
+    align-self: flex-start;
+    border: 1px solid #ccc;
+}
+
+/* Поле ввода сообщения */
+#userInput {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#sendBtn {
+    background-color: #075e54;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+#sendBtn i {
+    font-size: 20px;
+}
+
+/* Кнопка для открытия чата */
+#openChatBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 300px;
-    height: 400px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Initially hidden */
-    flex-direction: column;
-    z-index: 1000; /* Ensure it appears on top */
-  }
-  
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+#openChatBtn:hover {
+    transform: scale(1.1);
+}
+
+#openChatBtn i {
+    font-size: 24px;
+}
