@@ -114,15 +114,27 @@ document.getElementById('sendBtn').addEventListener('click', () => {
     }
 });
 
-// Эмуляция ответа ассистента
-async function fetchAIResponse(userMessage) {
-    // Добавить реальный вызов API для получения ответа от OpenAI
-    setTimeout(() => {
-        const aiResponse = `Ответ на вопрос: "${userMessage}"`; // Здесь можно заменить на реальный ответ от OpenAI
-        addMessage('AI', aiResponse); // Добавляем ответ ассистента
-    }, 1000); // Эмуляция задержки ответа
+// Добавление сообщения в чат
+function addMessage(sender, message) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('message');
+    msgDiv.classList.add(sender === 'User' ? 'user-message' : 'ai-message');
+    msgDiv.textContent = message;
+    document.getElementById('messages').appendChild(msgDiv);
+    document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
 }
 
+// Обработчик отправки сообщения
+document.getElementById('sendBtn').addEventListener('click', () => {
+    const userMessage = document.getElementById('userInput').value.trim();
+    if (userMessage) {
+        addMessage('User', userMessage);  // Добавляем сообщение пользователя
+        fetchAIResponse(userMessage);     // Отправляем сообщение ассистенту
+        document.getElementById('userInput').value = '';  // Очищаем поле ввода
+    }
+});
+
+// Функция для запроса к серверу и получения ответа
 async function fetchAIResponse(userMessage) {
     try {
         const response = await fetch('/chat', {
@@ -132,9 +144,10 @@ async function fetchAIResponse(userMessage) {
             },
             body: JSON.stringify({ message: userMessage })
         });
+
         const data = await response.json();
-        addMessage('AI', data.response);
+        addMessage('AI', data.response); // Добавляем ответ ассистента в чат
     } catch (error) {
-        addMessage('AI', 'Произошла ошибка при получении ответа.');
+        addMessage('AI', 'Ошибка при получении ответа от ассистента.');
     }
 }
